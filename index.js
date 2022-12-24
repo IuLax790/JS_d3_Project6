@@ -23,7 +23,7 @@ const App = () => {
   const innerWidth = width - margin.left - margin.right;
 
   const xValue = d => d.timestamp;
-  const xAxisLabel = 'Time';
+  const xAxisLabel = 'Day';
 
   const yValue = d => d.temperature;
   const yAxisLabel = 'Temperature';
