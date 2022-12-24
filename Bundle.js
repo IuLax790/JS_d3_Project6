@@ -38,7 +38,7 @@
       React.createElement( 'g', { className: "tick", transform: `translate(0,${yScale(tickValue)})` },
         React.createElement( 'line', { x2: innerWidth }),
         React.createElement( 'text', {
-          key: tickValue, style: { textAnchor: 'end' }, x: -tickOffset, dy: ".32em" },
+          key: tickValue, style: { textAnchor: 'end' }, x: -tickOffset, dy: ".52em" },
           tickValue
         )
       )
@@ -55,7 +55,7 @@
   }) => (
     React.createElement( 'g', { className: "marks" },
       React.createElement( 'path', {
-        fill: "none", stroke: "black", d: d3.line()
+        fill: "none", stroke: "blue", d: d3.line()
           .x(d => xScale(xValue(d)))
           .y(d => yScale(yValue(d)))
           .curve(d3.curveNatural)(data) })
@@ -86,7 +86,7 @@
     const innerWidth = width - margin.left - margin.right;
 
     const xValue = d => d.timestamp;
-    const xAxisLabel = 'Time';
+    const xAxisLabel = 'Day';
 
     const yValue = d => d.temperature;
     const yAxisLabel = 'Temperature';
